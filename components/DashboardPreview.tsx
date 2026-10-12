@@ -16,7 +16,7 @@ export function DashboardPreview() {
         className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand/20 via-transparent to-accent/15 blur-2xl"
         aria-hidden
       />
-      <div className="relative overflow-hidden rounded-2xl border border-white/60 bg-surface/90 p-1 shadow-float backdrop-blur-md">
+      <div className="relative overflow-hidden rounded-2xl border border-slate-line/80 bg-surface/90 p-1 shadow-float backdrop-blur-md dark:border-slate-line dark:bg-surface/95">
         <div className="rounded-xl border border-slate-line/60 bg-surface-muted/50 p-4 sm:p-5">
           <div className="mb-4 flex items-center justify-between gap-3">
             <div>
@@ -65,8 +65,8 @@ export function DashboardPreview() {
                       className={`flex items-center justify-center border-b border-slate-line/70 py-2.5 font-mono tabular-nums ${
                         row.highlight
                           ? r == null
-                            ? "bg-red-50 font-semibold text-red-600"
-                            : "bg-accent-soft/30 font-semibold text-accent"
+                            ? "bg-danger-soft/80 font-semibold text-danger"
+                            : "bg-accent-soft/50 font-semibold text-accent"
                           : "text-slate-muted"
                       }`}
                     >
@@ -91,11 +91,11 @@ export function DashboardPreview() {
               </p>
               <p className="mt-1 font-display text-2xl text-slate-ink">38%</p>
             </div>
-            <div className="col-span-2 rounded-xl border border-red-100 bg-red-50/80 px-3 py-3 sm:col-span-1">
-              <p className="font-mono text-[10px] uppercase text-red-700/70">
+            <div className="col-span-2 rounded-xl border border-danger/20 bg-danger-soft/60 px-3 py-3 sm:col-span-1">
+              <p className="font-mono text-[10px] uppercase text-danger/80">
                 Fact errors
               </p>
-              <p className="mt-1 font-display text-2xl text-red-600">2</p>
+              <p className="mt-1 font-display text-2xl text-danger">2</p>
             </div>
           </div>
         </div>

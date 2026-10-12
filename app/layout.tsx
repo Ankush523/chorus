@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Calistoga, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const calistoga = Calistoga({
@@ -67,17 +68,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${calistoga.variable} ${dmSans.variable} ${jetbrains.variable}`}
     >
       <body className="min-h-screen font-sans">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
-        >
-          Skip to main content
-        </a>
-        <div className="grain" aria-hidden />
-        {children}
+        <ThemeProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
+          >
+            Skip to main content
+          </a>
+          <div className="grain" aria-hidden />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

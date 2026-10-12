@@ -105,7 +105,7 @@ export function WaitlistForm() {
         <p
           role="status"
           aria-live="polite"
-          className={`text-sm font-medium ${status === "error" ? "text-red-600" : "text-success"}`}
+          className={`text-sm font-medium ${status === "error" ? "text-danger" : "text-success"}`}
         >
           {message}
         </p>

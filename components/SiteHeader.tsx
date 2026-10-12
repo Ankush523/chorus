@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { href: "#product", label: "Product" },
@@ -43,9 +44,15 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <a href="#waitlist" className="btn-primary !min-h-[40px] !px-5 !py-2.5 !text-sm">
-          Request access
-        </a>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
+          <a
+            href="#waitlist"
+            className="btn-primary !min-h-[40px] !px-5 !py-2.5 !text-sm"
+          >
+            Request access
+          </a>
+        </div>
       </div>
     </header>
   );

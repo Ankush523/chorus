@@ -10,25 +10,29 @@ const steps = [
     n: "01",
     title: "Probe",
     body: "Fixed geo-local prompts across major assistants — same wording, logged models, scheduled runs.",
-    tone: "from-brand/10 to-brand/5",
+    tone:
+      "from-brand/10 via-surface to-canvas-subtle dark:from-brand/25 dark:via-surface dark:to-canvas-subtle",
   },
   {
     n: "02",
     title: "Parse & score",
     body: "Ranked lists, citations, and factual claims → mention rate, dispersion, competitor share.",
-    tone: "from-indigo-50 to-surface",
+    tone:
+      "from-brand/5 via-surface to-canvas-subtle dark:from-brand/15 dark:via-surface dark:to-canvas-subtle",
   },
   {
     n: "03",
     title: "Fix at source",
     body: "Tasks tied to directories, reviews, and listicles models actually cite — not generic SEO.",
-    tone: "from-accent-soft/80 to-surface",
+    tone:
+      "from-accent-soft/60 via-surface to-canvas-subtle dark:from-accent-soft/40 dark:via-surface dark:to-canvas-subtle",
   },
   {
     n: "04",
     title: "Verify",
     body: "Weekly re-probes and location reports operators can act on — and investors can trust.",
-    tone: "from-emerald-50 to-surface",
+    tone:
+      "from-success-soft/80 via-surface to-canvas-subtle dark:from-success-soft/50 dark:via-surface dark:to-canvas-subtle",
   },
 ];
 
@@ -167,7 +171,7 @@ export default function HomePage() {
         </section>
 
         {/* Technology band */}
-        <section className="relative overflow-hidden bg-slate-ink py-20 text-white sm:py-28">
+        <section className="relative overflow-hidden bg-band py-20 text-white sm:py-28">
           <div
             className="pointer-events-none absolute inset-0 opacity-40"
             style={{
@@ -184,7 +188,7 @@ export default function HomePage() {
               <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
                 Multi-engine measurement. Claude-powered analysis.
               </h2>
-              <p className="mt-5 text-base leading-relaxed text-slate-300">
+              <p className="mt-5 text-base leading-relaxed text-band-muted">
                 We probe several assistants to capture platform drift. The{" "}
                 <strong className="font-semibold text-white">
                   Anthropic Claude API
@@ -200,7 +204,7 @@ export default function HomePage() {
                   engine into chorus — lower dispersion, correct facts, for
                   every pin on the map.
                 </p>
-                <footer className="mt-5 text-sm text-slate-400">
+                <footer className="mt-5 text-sm text-band-muted/80">
                   Chorus founding team
                 </footer>
               </blockquote>

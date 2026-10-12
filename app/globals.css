@@ -5,6 +5,60 @@
 :root {
   --header-h: 4.5rem;
   --ring: 29 78 216;
+
+  /* Surfaces */
+  --canvas: 250 249 246;
+  --canvas-subtle: 241 245 249;
+  --surface: 255 255 255;
+  --surface-muted: 248 250 252;
+
+  /* Text & borders */
+  --text-ink: 15 23 42;
+  --text-body: 51 65 85;
+  --text-muted: 100 116 139;
+  --border-line: 226 232 240;
+
+  /* Semantic tints */
+  --accent-soft: 255 237 213;
+  --success-soft: 209 250 229;
+  --danger: 220 38 38;
+  --danger-soft: 254 226 226;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 40px -12px rgba(15, 23, 42, 0.12);
+  --shadow-float: 0 24px 80px -20px rgba(15, 23, 42, 0.18);
+  --shadow-glass: 0 8px 32px rgba(15, 23, 42, 0.06);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  /* Contrast band (same in both themes) */
+  --band: 15 23 42;
+  --band-muted: 203 213 225;
+
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: 9 12 20;
+  --canvas-subtle: 15 23 42;
+  --surface: 17 24 39;
+  --surface-muted: 30 41 59;
+
+  --text-ink: 248 250 252;
+  --text-body: 203 213 225;
+  --text-muted: 148 163 184;
+  --border-line: 51 65 85;
+
+  --accent-soft: 67 32 14;
+  --success-soft: 6 44 34;
+  --danger: 248 113 113;
+  --danger-soft: 69 10 10;
+
+  --shadow-soft: 0 2px 40px -12px rgba(0, 0, 0, 0.45);
+  --shadow-float: 0 24px 80px -20px rgba(0, 0, 0, 0.55);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  color-scheme: dark;
 }
 
 html {
@@ -25,7 +79,7 @@ html {
 }
 
 body {
-  @apply bg-canvas text-slate-ink antialiased;
+  @apply bg-canvas text-slate-ink antialiased transition-colors duration-300;
 }
 
 ::selection {
@@ -42,9 +96,18 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+.dark .grain {
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+}
+
 .mesh-blob {
   filter: blur(80px);
   opacity: 0.55;
+}
+
+.dark .mesh-blob {
+  opacity: 0.35;
 }
 
 @layer components {
@@ -57,11 +120,11 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft transition duration-200 ease-out hover:bg-accent-hover hover:shadow-float focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 active:scale-[0.98];
+    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft transition duration-200 ease-out hover:bg-accent-hover hover:shadow-float focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full border border-slate-line bg-surface px-6 py-3 text-sm font-semibold text-slate-ink transition duration-200 ease-out hover:border-brand/30 hover:bg-canvas-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 active:scale-[0.98];
+    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full border border-slate-line bg-surface px-6 py-3 text-sm font-semibold text-slate-ink transition duration-200 ease-out hover:border-brand/30 hover:bg-canvas-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas active:scale-[0.98];
   }
 
   .input-field {
@@ -70,6 +133,10 @@ body {
 
   .section-label {
     @apply font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-brand;
+  }
+
+  .bento-tile {
+    @apply border border-slate-line/90 bg-gradient-to-br from-surface to-canvas-subtle shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-float;
   }
 }
 

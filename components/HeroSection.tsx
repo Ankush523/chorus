@@ -16,15 +16,15 @@ export function HeroSection() {
           alt=""
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center dark:brightness-[0.45] dark:saturate-[0.85]"
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-canvas via-canvas/95 to-canvas/40"
+          className="absolute inset-0 bg-gradient-to-r from-canvas via-canvas/95 to-canvas/40 dark:from-canvas dark:via-canvas/92 dark:to-canvas/55"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas/30"
+          className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas/30 dark:from-canvas dark:to-canvas/40"
           aria-hidden
         />
       </div>

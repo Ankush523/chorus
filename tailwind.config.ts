@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,18 +11,18 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: "#FAF9F6",
-          subtle: "#F1F5F9",
+          DEFAULT: "rgb(var(--canvas) / <alpha-value>)",
+          subtle: "rgb(var(--canvas-subtle) / <alpha-value>)",
         },
         surface: {
-          DEFAULT: "#FFFFFF",
-          muted: "#F8FAFC",
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          muted: "rgb(var(--surface-muted) / <alpha-value>)",
         },
         slate: {
-          ink: "#0F172A",
-          body: "#334155",
-          muted: "#64748B",
-          line: "#E2E8F0",
+          ink: "rgb(var(--text-ink) / <alpha-value>)",
+          body: "rgb(var(--text-body) / <alpha-value>)",
+          muted: "rgb(var(--text-muted) / <alpha-value>)",
+          line: "rgb(var(--border-line) / <alpha-value>)",
         },
         brand: {
           DEFAULT: "#1D4ED8",
@@ -31,11 +32,19 @@ const config: Config = {
         accent: {
           DEFAULT: "#EA580C",
           hover: "#C2410C",
-          soft: "#FFEDD5",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
         },
         success: {
           DEFAULT: "#059669",
-          soft: "#D1FAE5",
+          soft: "rgb(var(--success-soft) / <alpha-value>)",
+        },
+        danger: {
+          DEFAULT: "rgb(var(--danger) / <alpha-value>)",
+          soft: "rgb(var(--danger-soft) / <alpha-value>)",
+        },
+        band: {
+          DEFAULT: "rgb(var(--band) / <alpha-value>)",
+          muted: "rgb(var(--band-muted) / <alpha-value>)",
         },
       },
       fontFamily: {
@@ -44,10 +53,10 @@ const config: Config = {
         mono: ["var(--font-jetbrains)", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        soft: "0 2px 40px -12px rgba(15, 23, 42, 0.12)",
-        float: "0 24px 80px -20px rgba(15, 23, 42, 0.18)",
-        glass: "0 8px 32px rgba(15, 23, 42, 0.06)",
-        inset: "inset 0 1px 0 rgba(255, 255, 255, 0.8)",
+        soft: "var(--shadow-soft)",
+        float: "var(--shadow-float)",
+        glass: "var(--shadow-glass)",
+        inset: "var(--shadow-inset)",
       },
       animation: {
         "pulse-soft": "pulseSoft 2.5s ease-in-out infinite",

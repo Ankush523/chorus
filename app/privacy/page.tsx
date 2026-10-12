@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -12,13 +13,14 @@ const contactEmail =
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-canvas">
-      <header className="glass-nav px-5 py-5 sm:px-8">
+      <header className="glass-nav flex items-center justify-between px-5 py-5 sm:px-8">
         <Link
           href="/"
           className="cursor-pointer font-display text-2xl text-slate-ink hover:text-brand"
         >
           ← Chorus
         </Link>
+        <ThemeToggle />
       </header>
       <article className="mx-auto max-w-2xl px-5 py-12 sm:px-8">
         <h1 className="font-display text-4xl text-slate-ink">Privacy Policy</h1>
