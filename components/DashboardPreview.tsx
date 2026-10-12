@@ -24,7 +24,7 @@ export function DashboardPreview() {
                 Live probe
               </p>
               <p className="mt-1 text-sm font-semibold text-slate-ink">
-                Best matcha · Indiranagar
+                Best matcha · West Village, NYC
               </p>
             </div>
             <div className="flex items-center gap-2 rounded-full bg-success-soft px-3 py-1">

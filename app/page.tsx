@@ -71,9 +71,10 @@ export default function HomePage() {
                 National GEO tools miss the door.
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-body">
-                A matcha bar loses foot traffic when Claude omits you, Perplexity
-                ranks you fourth, and ChatGPT lists the wrong hours. Operators
-                need per-place visibility — not one logo on a national chart.
+                A matcha bar in the West Village loses foot traffic when Claude
+                omits you, Perplexity ranks you fourth, and ChatGPT lists the
+                wrong hours. Operators need per-place visibility — not one logo
+                on a national chart.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -88,10 +89,10 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-ink/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                   <p className="font-mono text-xs uppercase tracking-widest text-white/70">
-                    Indiranagar · prompt pack
+                    New York City · prompt pack
                   </p>
                   <p className="mt-2 max-w-sm font-display text-2xl text-white">
-                    &ldquo;Best ceremonial matcha near me&rdquo;
+                    &ldquo;Best matcha in the West Village&rdquo;
                   </p>
                 </div>
               </div>
@@ -220,9 +221,12 @@ export default function HomePage() {
                   30 days. Measured beta.
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-slate-body">
-                  New openings and multi-location F&amp;B — baseline probe, fix
-                  queue, weekly re-probes, and a final dispersion report for
-                  operators and investors.
+                  New openings and multi-location F&amp;B in{" "}
+                  <strong className="font-semibold text-slate-ink">
+                    New York City
+                  </strong>{" "}
+                  — baseline probe, fix queue, weekly re-probes, and a final
+                  dispersion report for operators and investors.
                 </p>
               </Reveal>
               <Reveal delay={0.08}>
