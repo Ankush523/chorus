@@ -42,11 +42,11 @@ export function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form onSubmit={onSubmit} className="space-y-5" aria-label="Pilot waitlist">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block sm:col-span-2">
-          <span className="mb-1.5 block text-sm font-medium text-paper-muted">
-            Work email
+          <span className="mb-2 block text-sm font-semibold text-slate-ink">
+            Work email <span className="text-accent">*</span>
           </span>
           <input
             type="email"
@@ -56,12 +56,12 @@ export function WaitlistForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@company.com"
-            className="w-full rounded-lg border border-ink-border bg-ink px-4 py-3 text-paper placeholder:text-paper-muted/50 outline-none ring-brass/0 transition focus:border-brass/50 focus:ring-2 focus:ring-brass/20"
+            className="input-field"
           />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-sm font-medium text-paper-muted">
-            Company
+          <span className="mb-2 block text-sm font-semibold text-slate-ink">
+            Company <span className="text-accent">*</span>
           </span>
           <input
             type="text"
@@ -70,19 +70,19 @@ export function WaitlistForm() {
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             placeholder="Brand or group name"
-            className="w-full rounded-lg border border-ink-border bg-ink px-4 py-3 text-paper placeholder:text-paper-muted/50 outline-none transition focus:border-brass/50 focus:ring-2 focus:ring-brass/20"
+            className="input-field"
           />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-sm font-medium text-paper-muted">
-            Locations
+          <span className="mb-2 block text-sm font-semibold text-slate-ink">
+            Locations <span className="text-accent">*</span>
           </span>
           <select
             name="locations"
             required
             value={locations}
             onChange={(e) => setLocations(e.target.value)}
-            className="w-full rounded-lg border border-ink-border bg-ink px-4 py-3 text-paper outline-none transition focus:border-brass/50 focus:ring-2 focus:ring-brass/20"
+            className="input-field cursor-pointer"
           >
             <option value="" disabled>
               Select range
@@ -97,21 +97,25 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-lg bg-brass px-6 py-3.5 text-sm font-semibold text-ink transition hover:bg-brass-glow disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === "loading" ? "Submitting…" : "Join the pilot waitlist"}
       </button>
       {message ? (
         <p
           role="status"
-          className={`text-sm ${status === "error" ? "text-red-400" : "text-signal"}`}
+          aria-live="polite"
+          className={`text-sm font-medium ${status === "error" ? "text-red-600" : "text-success"}`}
         >
           {message}
         </p>
       ) : null}
-      <p className="text-xs leading-relaxed text-paper-muted">
+      <p className="text-xs leading-relaxed text-slate-muted">
         By submitting, you agree to our{" "}
-        <a href="/privacy" className="underline underline-offset-2 hover:text-paper">
+        <a
+          href="/privacy"
+          className="cursor-pointer font-medium text-brand underline-offset-2 hover:underline"
+        >
           Privacy Policy
         </a>
         . We use your information only to contact you about Chorus.

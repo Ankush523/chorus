@@ -3,19 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --header-h: 4.25rem;
+  --header-h: 4.5rem;
+  --ring: 29 78 216;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
-  @apply bg-ink text-paper antialiased;
+  @apply bg-canvas text-slate-ink antialiased;
 }
 
 ::selection {
-  @apply bg-brass/30 text-paper;
+  @apply bg-brand/15 text-slate-ink;
 }
 
 .grain {
@@ -23,8 +37,40 @@ body {
   position: fixed;
   inset: 0;
   z-index: 50;
-  opacity: 0.045;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.mesh-blob {
+  filter: blur(80px);
+  opacity: 0.55;
+}
+
+@layer components {
+  .glass-nav {
+    @apply border-b border-slate-line/80 bg-surface/70 shadow-glass backdrop-blur-xl;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-slate-line/90 bg-surface/80 shadow-soft backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft transition duration-200 ease-out hover:bg-accent-hover hover:shadow-float focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-full border border-slate-line bg-surface px-6 py-3 text-sm font-semibold text-slate-ink transition duration-200 ease-out hover:border-brand/30 hover:bg-canvas-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .input-field {
+    @apply min-h-[44px] w-full rounded-xl border border-slate-line bg-surface px-4 py-3 text-base text-slate-ink placeholder:text-slate-muted/60 transition duration-200 focus:border-brand/40 focus:outline-none focus:ring-2 focus:ring-brand/15;
+  }
+
+  .section-label {
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-brand;
+  }
 }
 
 @layer utilities {

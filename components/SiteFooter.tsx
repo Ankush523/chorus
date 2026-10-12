@@ -5,36 +5,37 @@ const contactEmail =
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink-border bg-ink-raised/50">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
+    <footer className="border-t border-slate-line bg-surface">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-14 sm:px-8 lg:flex-row lg:items-start lg:justify-between lg:px-10">
         <div>
-          <p className="font-display text-xl font-semibold text-paper">
-            Chorus
-          </p>
-          <p className="mt-2 max-w-sm text-sm leading-relaxed text-paper-muted">
-            Local AI discovery ops — one coherent story across every assistant,
-            for every location.
+          <p className="font-display text-3xl text-slate-ink">Chorus</p>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-muted">
+            Local AI discovery ops — consistent recommendations and correct
+            facts across every assistant, for every pin on the map.
           </p>
         </div>
-        <div className="flex flex-col gap-2 text-sm text-paper-muted sm:flex-row sm:gap-10">
+        <div className="flex flex-col gap-8 sm:flex-row sm:gap-16">
           <div>
-            <p className="mb-2 font-medium text-paper">Contact</p>
+            <p className="text-sm font-semibold text-slate-ink">Contact</p>
             <a
               href={`mailto:${contactEmail}`}
-              className="hover:text-brass-glow"
+              className="mt-2 inline-block cursor-pointer text-sm text-brand hover:underline"
             >
               {contactEmail}
             </a>
           </div>
           <div>
-            <p className="mb-2 font-medium text-paper">Legal</p>
-            <Link href="/privacy" className="block hover:text-brass-glow">
+            <p className="text-sm font-semibold text-slate-ink">Legal</p>
+            <Link
+              href="/privacy"
+              className="mt-2 inline-block cursor-pointer text-sm text-slate-body hover:text-brand"
+            >
               Privacy Policy
             </Link>
           </div>
         </div>
       </div>
-      <div className="border-t border-ink-border/60 px-5 py-4 text-center text-xs text-paper-muted sm:px-8">
+      <div className="border-t border-slate-line px-5 py-5 text-center text-xs text-slate-muted sm:px-8">
         © {new Date().getFullYear()} Chorus. All rights reserved.
       </div>
     </footer>
