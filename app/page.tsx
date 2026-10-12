@@ -201,11 +201,11 @@ export default function HomePage() {
               <blockquote className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
                 <p className="font-display text-xl leading-snug text-white/95">
                   We&apos;re not selling another mention chart. We bring every
-                  engine into chorus — lower dispersion, correct facts, for
+                  engine into accord — lower dispersion, correct facts, for
                   every pin on the map.
                 </p>
                 <footer className="mt-5 text-sm text-band-muted/80">
-                  Chorus founding team
+                  Accord founding team
                 </footer>
               </blockquote>
             </Reveal>
@@ -278,11 +278,11 @@ export default function HomePage() {
                     <p className="mt-6 text-sm text-slate-muted">
                       Prefer email?{" "}
                       <a
-                        href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getchorus.ai"}`}
+                        href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getaccord.com"}`}
                         className="cursor-pointer font-semibold text-brand hover:underline"
                       >
                         {process.env.NEXT_PUBLIC_CONTACT_EMAIL ??
-                          "hello@getchorus.ai"}
+                          "hello@getaccord.com"}
                       </a>
                     </p>
                   </Reveal>

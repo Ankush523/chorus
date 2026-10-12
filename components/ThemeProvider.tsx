@@ -9,7 +9,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       attribute="class"
       defaultTheme="system"
       enableSystem
-      storageKey="chorus-theme"
+      storageKey="accord-theme"
       disableTransitionOnChange={false}
     >
       {children}

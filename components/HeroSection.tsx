@@ -58,7 +58,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             >
-              Chorus
+              Accord
             </motion.h1>
 
             <motion.p
@@ -67,7 +67,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Many assistants. One story for every location.
+              Many assistants. One accord for every location.
             </motion.p>
 
             <motion.p

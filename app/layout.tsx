@@ -24,13 +24,13 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://getchorus.ai";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://getaccord.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Chorus — Local AI discovery ops",
-    template: "%s · Chorus",
+    default: "Accord — Local AI discovery ops",
+    template: "%s · Accord",
   },
   description:
     "Measure and improve how AI assistants recommend your locations. Cross-engine visibility, factual accuracy, and source-level fixes for multi-location and new-opening local businesses.",
@@ -42,19 +42,19 @@ export const metadata: Metadata = {
     "multi-location",
     "generative engine optimization",
   ],
-  authors: [{ name: "Chorus" }],
+  authors: [{ name: "Accord" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Chorus",
-    title: "Chorus — Local AI discovery ops",
+    siteName: "Accord",
+    title: "Accord — Local AI discovery ops",
     description:
       "Consistent, accurate AI recommendations for every location you operate.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chorus",
+    title: "Accord",
     description: "Local AI discovery ops for physical businesses.",
   },
   robots: { index: true, follow: true },
@@ -71,7 +71,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${calistoga.variable} ${dmSans.variable} ${jetbrains.variable}`}
     >
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen font-sans" suppressHydrationWarning>
         <ThemeProvider>
           <a
             href="#main"

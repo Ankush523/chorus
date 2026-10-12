@@ -118,7 +118,7 @@ export function WaitlistForm() {
         >
           Privacy Policy
         </a>
-        . We use your information only to contact you about Chorus.
+        . We use your information only to contact you about Accord.
       </p>
     </form>
   );

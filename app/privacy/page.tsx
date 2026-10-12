@@ -4,11 +4,11 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Chorus collects and uses information.",
+  description: "How Accord collects and uses information.",
 };
 
 const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getchorus.ai";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getaccord.com";
 
 export default function PrivacyPage() {
   return (
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           href="/"
           className="cursor-pointer font-display text-2xl text-slate-ink hover:text-brand"
         >
-          ← Chorus
+          ← Accord
         </Link>
         <ThemeToggle />
       </header>
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
               Who we are
             </h2>
             <p>
-              Chorus (&quot;we,&quot; &quot;us&quot;) provides software and
+              Accord (&quot;we,&quot; &quot;us&quot;) provides software and
               services that help local and multi-location businesses understand
               and improve how AI-powered assistants describe and recommend their
               locations.

@@ -31,7 +31,7 @@ export function SiteHeader() {
           href="/"
           className="font-display text-2xl tracking-tight text-slate-ink sm:text-[1.65rem]"
         >
-          Chorus
+          Accord
         </Link>
         <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">
           {nav.map((item) => (
