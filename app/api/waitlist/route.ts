@@ -114,7 +114,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "Unable to save submission. Email us at hello@getaccord.com.",
+        error: "Unable to save submission. Email us at ankush@inaccord.xyz.",
       },
       { status: 503 },
     );

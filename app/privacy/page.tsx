@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getaccord.com";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "ankush@inaccord.xyz";
 
 export default function PrivacyPage() {
   return (

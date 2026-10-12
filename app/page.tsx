@@ -278,11 +278,11 @@ export default function HomePage() {
                     <p className="mt-6 text-sm text-slate-muted">
                       Prefer email?{" "}
                       <a
-                        href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getaccord.com"}`}
+                        href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "ankush@inaccord.xyz"}`}
                         className="cursor-pointer font-semibold text-brand hover:underline"
                       >
                         {process.env.NEXT_PUBLIC_CONTACT_EMAIL ??
-                          "hello@getaccord.com"}
+                          "ankush@inaccord.xyz"}
                       </a>
                     </p>
                   </Reveal>

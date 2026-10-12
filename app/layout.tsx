@@ -24,7 +24,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://getaccord.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://inaccord.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

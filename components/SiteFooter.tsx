@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const contactEmail =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@getaccord.com";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "ankush@inaccord.xyz";
 
 export function SiteFooter() {
   return (
@@ -36,7 +36,10 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-slate-line px-5 py-5 text-center text-xs text-slate-muted sm:px-8">
-        © {new Date().getFullYear()} Accord. All rights reserved.
+        <p>Accord · inaccord.xyz · Local AI discovery ops</p>
+        <p className="mt-1">
+          © {new Date().getFullYear()} Accord. All rights reserved.
+        </p>
       </div>
     </footer>
   );
